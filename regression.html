@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">@navneeth</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/in/navaneeth-sharma-9983561a9/">
+            <img src="in.png" width="40" height="40" class="nav-link"
+              href="https://www.linkedin.com/in/navaneeth-sharma-9983561a9/"></img>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <center>
+      <h1 style="font-family:verdana;font-size: 3.5em;">
+        The Linear Regression
+      </h1>
+      <i>- An Algorithm in the heart of AI</i>
+
+
+    </center>
+  </div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div>
+            <img src="6.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container mx-12 px-12 py-5">
+    <!-- <h3 style="font-family:verdana;font-size: 2.5em;">
+      Why Machine Learning Algorithms ?
+    </h3> -->
+    <p style="font-family:verdana;font-size: 1.5em;">
+      <b style="font-size: 1.5em;">I</b>n the Upcomming Age of AI, The Machine Learning plays a vital role to uplift the
+      Society.
+      To apply the Machine Learning in Real Life it is important to know how it actually works. The Machine Learning is
+      divided into Supervised,
+      Unsupervised and Reinforcement learning at a higher level. In most of recent technology the Supervised learning
+      has
+      won the community's attention. Deep Learning has emerged one of the most game changing tool in AI technology,
+      which
+      mostly deels with Supervised learning. Its better to understand some basic ML algorithms before diving into other
+      parts
+      of the Machine Learning.
+    </p>
+    <hr>
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      What is Linear Regression And Why ?
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      Before understanding what is Linear Regression it is very much significant to know that what is Regression. So
+      what is
+      Regression ? In simple words of machine learning terminology, its just a problem which deals with the real values
+      for
+      example if you want to predict a price of a house or a stock market price prediction, which is a real valued
+      number. The Linear Regression is nothing but
+      a straight line which fits the input data X to predict output y.
+
+      <center>
+        <figure>
+          <img src="Figure_1.png" class="d-block w-0.5" alt="Fig.1">
+          <figcaption>Fig.1 - A simple Linear Regression to a house price prdiction data set.</figcaption>
+        </figure>
+      </center>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      The Regression can be performed by various algorithms, but Linear Regression tends to be easy to understand and
+      we can carry away same ideas for different algorithms. Linear Regression is an algorithm which learns to fit a
+      line in the dataset given. In simple words it calculates slope and intercepts of the line to be fitted as shown in
+      the Fig.1 .
+    </p>
+    </p>
+    <hr>
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      The Hypothesis
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      Hypothesis is a function which maps input X to output y i.e it takes the data as the input and outputs
+      the estimated output. For Linear Regression the hypothesis can be defined as
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <b style="font-size: 1.2em;text-align: center;">
+        h<sub>&Theta;</sub>(X) = &Theta;<sup>T</sup>.X
+      </b>
+    </div>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      where h<sub>&Theta;</sub>(X) is the hypothesis, &Theta; is the learning parameter which can be expressed as
+      &Theta; = &Theta;<sub>0</sub> + &Theta;<sub>1</sub> + &Theta;<sub>2</sub> + .... + &Theta;<sub>n</sub>
+      where n is number of features. Each values of &Theta; is a feature of the training data. The X is the training
+      data.
+      To understand the concept better
+      lets consider a data with following details.
+    <div class="container py-3">
+      <table>
+        <tr>
+          <th>Area(Sq meters)</th>
+          <th>Rooms</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td> 2104</td>
+          <td>3</td>
+          <td>399900</td>
+        </tr>
+        <tr>
+          <td>1600</td>
+          <td>3</td>
+          <td>329900</td>
+        </tr>
+        <tr>
+          <td>2400</td>
+          <td>3</td>
+          <td>369000</td>
+        </tr>
+        <tr>
+          <td>1416</td>
+          <td>2</td>
+          <td>232000</td>
+        </tr>
+        <tr>
+          <td>3000</td>
+          <td>4</td>
+          <td>539900</td>
+        </tr>
+        <tr>
+          <td>1985</td>
+          <td>4</td>
+          <td>299900</td>
+        </tr>
+      </table>
+    </div>
+
+    <p style="font-family:verdana;font-size: 1.5em;">
+      Here Our task is to predict the Price of a house given the 2 features Area and Rooms. In order to do that lets
+      define our hypothesis. So Hypothesis h<sub>&Theta;</sub>(X) will be Transpose of &Theta; , the &Theta; as defined
+      will be learning
+      the features. Since Python is easy to implement, I will be using it (you can choose the language of your choice).
+      In order to learn the intercept parameter (In nueral networks it is usually termed as bias), we will add an extra
+      column of ones to X, now the data becomes
+
+    <div class="container py-3">
+      <table>
+        <tr>
+          <th>&Theta;<sub>0</sub></th>
+          <th>Area(Sq meters)</th>
+          <th>Rooms</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td> 1</td>
+          <td> 2104</td>
+          <td>3</td>
+          <td>399900</td>
+        </tr>
+        <tr>
+          <td> 1</td>
+          <td>1600</td>
+          <td>3</td>
+          <td>329900</td>
+        </tr>
+      </table>
+    </div>
+    <center>This Table is for the purpose of understanding</center>
+
+    </p>
+
+    <p style="font-family:verdana;font-size: 1.5em;">
+
+      In Python the shape (Matrix size) of the &Theta; will be (n,1), here (3,1). And the shape of the X will be (n,m),
+      here (3,m) where m is training data size. Now calculating the hypothesis h<sub>&Theta;</sub>(X) will be of shape
+      (1,m).
+      <hr>
+    <h4><i> Python implementation</i></h4>
+    <div class="line number1 index0 alt2"><code class="comments">H = np.dot(Theta.T,X) </code></div>
+
+
+    </p>
+    </p>
+    </p>
+    <hr>
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      The Cost Function
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      The Cost Function (The cost function is calculated as an average of loss functions.
+      The loss function is a value which is calculated at every training example)
+      is the metrics which determines the error in actual and predicted output. Minimizing the error
+      will give a generelized solution for the output. For Regression Tasks <b>Mean Squared Error</b> have proven
+      very good over years. The Cost function can be defined as
+
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <b style="font-size: 1.2em;text-align: center;">
+        J(&Theta;) = &sum;(h<sub>&Theta;</sub>(X) - y)<sup>2</sup>
+      </b>
+
+    </div>
+    <center>The Vectorized way</center>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      The J(&Theta;) is calculated by summing over entire training data after calculating the Squared error. To get the
+      best accuracy or least error the cost function should be minimized. This can be achieved through an approach
+      called gradient descent.
+      <hr>
+    <h4><i>Python implementation</i> </h4>
+    <table>
+      <div class="container my-120">
+        <div class="line number1 index0 alt2"><code class="comments">def cost(X, y, Theta):</code></div>
+        <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+            class="keyword"> m = X.shape[1] </code></div>
+        <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+            class="keyword"> cost = (1/(2*m)) * np.sum((H - y.T)**2) </code></div>
+        <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+            class="keyword"> return cost </code></div>
+      </div>
+    </table>
+    </p>
+    </p>
+    <hr>
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      The Optimization
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+
+      Optimization for any problem helps to reduce the error or maximizes the accuracy. Similarly in Machine Learning
+      model Optimization helps to reduce the error. The most popular approach is called <b> Gradient Descent </b> (It is
+      also
+      called as Batch Gradient Descent). This
+      approach is very easy to understand and visualize, just imagine a ball kept at a hilly region. It will gradually
+      come down with a rate.
+      <center>
+        <div class="container">
+          <img src="1.gif" alt="">
+        </div>
+      </center>
+
+    </p>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      As in above diagram, the gradient descent algorithm is designed, i.e
+
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <b style="font-size: 1.2em;text-align: center;">
+        Reapeat {<br>
+
+        &Theta; := &Theta; - &alpha;<sup> &part;J(&Theta;)</sup>/<sub>&part;&Theta;</sub><br>
+
+        }
+      </b>
+    </div>
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <!-- <b style="font-family:verdana;font-size: 1.5em;"> -->
+
+      <!-- </b> -->
+      </center>
+    </div>
+
+    <p style="font-family:verdana;font-size: 1.5em;">
+      where the &alpha; is learning rate or step size at which it comes down to the local minimum. The learning rate is
+      the
+      speed at which cost decreases. The faster the learning rate, the early it will reach but there is a chance
+      overshooting and
+      might diverge. The smaller the step size or learning rate slower will it converge but it will accurate. So the
+      &alpha; must
+      be choosen wisley. The partial derivative of J(&Theta;) is
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <b style="font-size: 1.2em;text-align: center;">
+        <sup> &part;J(&Theta;)</sup>/<sub>&part;&Theta;</sub> = &sum;(h<sub>&Theta;</sub>(X)-y).X
+      </b>
+    </div>
+
+    <div class="container">
+      <center>
+        <img src="Figure_2.png" alt="">
+      </center>
+    </div>
+
+    </p>
+    <hr>
+
+
+
+
+    <h4><i>Python implementation</i> </h4>
+    <div class="container my-120">
+      <div class="line number1 index0 alt2"><code
+          class="comments">dJ = (1/m) * (np.sum(np.dot((H - y.T),X)), axis=0)</code></div>
+      <div class="line number1 index0 alt2"><code class="comments">&nbsp;&nbsp;&nbsp;&nbsp;</code></div>
+      <div class="line number1 index0 alt2"><code class="comments">for i in range(iterations):</code></div>
+      <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+          class="keyword">Theta = Theta - learning_rate * dJ </code></div>
+
+      <hr>
+
+    </div>
+
+
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      The Feature Scalling
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+
+      In order to come down the hill quickly and safely we must ensure that the hill is not narrow in which we are
+      moving down. Similarly for the Gradient Descent to converge fast the countor plots must be circular as shown in
+      below diagram.
+
+    <div class="center">
+      <center>
+        <img src="Figure_4.png" alt="">
+      </center>
+    </div>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      If One feature is the scale 1-1000 and another 0-1 the counter plot will be oriented ellipticaly, which will be
+      slower to
+      converge. So it is better to normalize both inputs, outputs and convert into similar scale. To avoid these
+      situations, Feature
+      Scalling is important. One of the method is Mean Normalization. Mean Normalization can be applied to all the input
+      features
+      except for X<sub>0</sub>. The formula is
+
+    <div class="container py-4" style="font-size: 1.5em;text-align: center;">
+      <b style="font-size: 1.2em;text-align: center;">
+        X = <sup>(X - &mu;)</sup>/<sub>s</sub>
+      </b>
+    </div>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      where &mu; is mean , s is standard deviation. The python implementation is
+    </p>
+    <hr>
+    <h4><i>Python implementation</i> </h4>
+    <div class="container my-120">
+      <div class="line number1 index0 alt2"><code class="comments">X = (X - np.mean(X))/np.std(X)</code></div>
+      <hr>
+      </p>
+      </p>
+      </p>
+
+    </div>
+
+    </p>
+
+    </p>
+    </p>
+
+
+
+    <h3 style="font-family:verdana;font-size: 2.5em;">
+      The Conclusion
+    </h3>
+    <p style="font-family:verdana;font-size: 1.5em;">
+      Further we can improve this algorithms in various sections, the polynomial Regression is the extention of this.
+      The normal Equation is also one of the techniques. The full code is available in the github repository .
+      The code is written in python and and instead of Theata I have used W and b (Modern Standard for nueral networks).
+      Along with Gradient Descent, the Momentum, RMSprop, Adam Optimization techniques are also added. 
+      <a href="https://github.com/Navaneeth-Sharma/ML_Algorithms_in_python_from_Scratch/blob/master/Regression.py"> click here</a>
+      to reach out my github repository.
+    </p>
+    </p>
+
+    <div class="container py-5" style="font-size: 1.5em;"><i>Thanks for Reading, See you next time.......</i></div>
+
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
