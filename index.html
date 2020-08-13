@@ -88,30 +88,25 @@
       Why Machine Learning Algorithms ?
     </h3> -->
     <p style="font-family:verdana;font-size: 1.5em;">
-      <b style="font-size: 1.5em;">I</b>n the Upcomming Age of AI, The Machine Learning plays a vital role to uplift the
-      Society.
-      To apply the Machine Learning in Real Life it is important to know how it actually works. The Machine Learning is
-      divided into Supervised,
-      Unsupervised and Reinforcement learning at a higher level. In most of recent technology the Supervised learning
-      has
-      won the community's attention. Deep Learning has emerged one of the most game changing tool in AI technology,
-      which
-      mostly deals with Supervised learning. Its better to understand some basic ML algorithms before diving into other
-      parts
-      of the Machine Learning.
+      <b style="font-size: 1.5em;">I</b>n the Upcoming Age of AI,
+      Machine Learning plays a vital role to uplift the Society.
+      To apply the Machine Learning in Real Life it is important to know how it works. 
+      Machine Learning is divided into Supervised, Unsupervised, and Reinforcement learning at a higher level. 
+      In most of the recent technology, Supervised learning has won the community's attention. 
+      Deep Learning has emerged one of the most game-changing tools in AI technology, 
+      which mostly deals with Supervised learning.
+      It's better to understand some basic ML algorithms before diving into other parts of the Machine Learning.
     </p>
     <hr>
     <h3 style="font-family:verdana;font-size: 2.5em;">
       What is Linear Regression And Why ?
     </h3>
     <p style="font-family:verdana;font-size: 1.5em;">
-      Before understanding what is Linear Regression it is very much significant to know that what is Regression. So
-      what is
-      Regression ? In simple words of machine learning terminology, its just a problem which deals with the continues real values,
-      for
-      example if you want to predict a stock market price or age of a person by capturing the face data, which is a continues real valued
-      number. The Linear Regression is nothing but
-      a straight line which fits the input data X to predict output y.
+      Before understanding what is Linear Regression it is very much significant to know that what is Regression. 
+      So what is Regression? In simple words of machine learning terminology,
+      it's just a problem which deals with the continuous real values, for example,
+      if you want to predict a stock market price or the age of a person by capturing the face data,
+      which is a continuous real-valued number. The Linear Regression is nothing but a straight line that fits the input data X to predict output y.
 
       <center>
         <figure>
@@ -120,10 +115,11 @@
         </figure>
       </center>
     <p style="font-family:verdana;font-size: 1.5em;">
-      The Regression can be performed by various algorithms, but Linear Regression tends to be easy to understand and
-      we can carry away same ideas for different algorithms. Linear Regression is an algorithm which learns to fit a
-      line in the dataset given. In simple words it calculates slope and intercepts of the line to be fitted as shown in
-      the Fig.1 .
+      
+The Regression can be performed by various algorithms, 
+      but Linear Regression tends to be easy to understand and we can carry away the same ideas for different algorithms.
+      Linear Regression is an algorithm that learns to fit a line in the dataset given. 
+      In simple words, it calculates slope and intercepts of the line to be fitted as shown in Fig.1.
     </p>
     </p>
     <hr>
@@ -131,20 +127,20 @@
       The Hypothesis
     </h3>
     <p style="font-family:verdana;font-size: 1.5em;">
-      Hypothesis is a function which maps input X to output y i.e it takes the data as the input and outputs
-      the estimated output. For Linear Regression the hypothesis can be defined as
+      
+The hypothesis is a function that maps input X to output y i.e it takes the data as the input and outputs the estimated output.
+      For Linear Regression the hypothesis can be defined as
     <div class="container py-4" style="font-size: 1.5em;text-align: center;">
       <b style="font-size: 1.2em;text-align: center;">
         h<sub>&Theta;</sub>(X) = &Theta;<sup>T</sup>.X
       </b>
     </div>
     <p style="font-family:verdana;font-size: 1.5em;">
-      where h<sub>&Theta;</sub>(X) is the hypothesis, &Theta; is the learning parameter which can be expressed as
+      where h<sub>&Theta;</sub>(X) is the hypothesis, &Theta; is the learning parameter which can be expressed as 
       &Theta; = &Theta;<sub>0</sub> + &Theta;<sub>1</sub> + &Theta;<sub>2</sub> + .... + &Theta;<sub>n</sub>
-      where n is number of features. Each values of &Theta; is a feature of the training data. The X is the training
-      data.
-      To understand the concept better
-      lets consider a data with following details.
+      where n is the number of features. 
+      Each value of &Theta; is a feature of the training data. X is the training data.
+      To understand the concept better let's consider data with the following details.
     <div class="container py-3">
       <table>
         <tr>
@@ -186,12 +182,12 @@
     </div>
 
     <p style="font-family:verdana;font-size: 1.5em;">
-      Here Our task is to predict the Price of a house given the 2 features Area and Rooms. In order to do that lets
-      define our hypothesis. So Hypothesis h<sub>&Theta;</sub>(X) will be Transpose of &Theta; , the &Theta; as defined
-      will be learning
-      the features. Since Python is easy to implement, I will be using it (you can choose the language of your choice).
-      In order to learn the intercept parameter (In nueral networks it is usually termed as bias), we will add an extra
-      column of ones to X, now the data becomes
+     
+      Here Our task is to predict the Price of a house given the 2 features Area and Rooms. 
+      To do that lets define our hypothesis. So Hypothesis h<sub>&Theta;</sub>(X) will be Transpose of &Theta; , the &Theta;
+      as defined will be learning the features. Since Python is easy to implement, 
+      I will be using it (you can choose the language of your choice). To learn the intercept parameter
+      (In nueral networks it is usually termed as bias), we will add an extra column of ones to X, now the data becomes
 
     <div class="container py-3">
       <table>
@@ -221,7 +217,7 @@
 
     <p style="font-family:verdana;font-size: 1.5em;">
 
-      In Python the shape (Matrix size) of the &Theta; will be (n,1), here (3,1). And the shape of the X will be (n,m),
+      In Python, the shape (Matrix size) of the &Theta; will be (n,1), here (3,1). And the shape of the X will be (n,m),
       here (3,m) where m is training data size. Now calculating the hypothesis h<sub>&Theta;</sub>(X) will be of shape
       (1,m).
       <hr>
@@ -237,11 +233,10 @@
       The Cost Function
     </h3>
     <p style="font-family:verdana;font-size: 1.5em;">
-      The Cost Function (The cost function is calculated as an average of loss functions.
-      The loss function is a value which is calculated at every training example)
-      is the metrics which determines the error in actual and predicted output. Minimizing the error
-      will give a generelized solution for the output. For Regression Tasks <b>Mean Squared Error</b> have proven
-      very good over years. The Cost function can be defined as
+      The Cost Function (The cost function is calculated as an average of loss functions. 
+      The loss function is a value which is calculated at every training example) is the metrics that
+      determine the error in the actual and predicted output. Minimizing the error will give a generalized 
+      solution for the output. For Regression Tasks <b>Mean Squared Error</b> has proven very good over the years. The Cost function can be defined as
 
     <div class="container py-4" style="font-size: 1.5em;text-align: center;">
       <b style="font-size: 1.2em;text-align: center;">
@@ -275,7 +270,7 @@
     </h3>
     <p style="font-family:verdana;font-size: 1.5em;">
 
-      Optimization for any problem helps to reduce the error or maximizes the accuracy. Similarly in Machine Learning
+      Optimization for any problem helps to reduce the error or maximizes the accuracy. Similarly in the Machine Learning
       model Optimization helps to reduce the error. The most popular approach is called <b> Gradient Descent </b> (It is
       also
       called as Batch Gradient Descent). This
@@ -289,7 +284,7 @@
 
     </p>
     <p style="font-family:verdana;font-size: 1.5em;">
-      As in above diagram, the gradient descent algorithm is designed, i.e
+      As in the above diagram, the gradient descent algorithm is designed, i.e
 
     <div class="container py-4" style="font-size: 1.5em;text-align: center;">
       <b style="font-size: 1.2em;text-align: center;">
@@ -308,13 +303,13 @@
     </div>
 
     <p style="font-family:verdana;font-size: 1.5em;">
-      where the &alpha; is learning rate or step size at which it comes down to the local minimum. The learning rate is
+      where the &alpha; is the learning rate or step size at which it comes down to the local minimum. The learning rate is
       the
       speed at which cost decreases. The faster the learning rate, the early it will reach but there is a chance
       overshooting and
       might diverge. The smaller the step size or learning rate slower will it converge but it will accurate. So the
       &alpha; must
-      be chosen wisley. The partial derivative of J(&Theta;) is
+      be chosen intelligently. The partial derivative of J(&Theta;) is
     <div class="container py-4" style="font-size: 1.5em;text-align: center;">
       <b style="font-size: 1.2em;text-align: center;">
         <sup> &part;J(&Theta;)</sup>/<sub>&part;&Theta;</sub> = &sum;(h<sub>&Theta;</sub>(X)-y).X
@@ -352,9 +347,9 @@
     </h3>
     <p style="font-family:verdana;font-size: 1.5em;">
 
-      In order to come down the hill quickly and safely we must ensure that the hill is not narrow in which we are
-      moving down. Similarly for the Gradient Descent to converge fast the countor plots must be circular as shown in
-      below diagram.
+      
+To come down the hill quickly and safely we must ensure that the hill is not narrow in which we are moving down. 
+      Similarly for the Gradient Descent to converge fast the counterplots must be circular as shown in the below diagram.
 
     <div class="center">
       <center>
@@ -362,13 +357,12 @@
       </center>
     </div>
     <p style="font-family:verdana;font-size: 1.5em;">
-      If One feature is the scale 1-1000 and another 0-1 the counter plot will be oriented ellipticaly, which will be
-      slower to
-      converge. So it is better to normalize both inputs, outputs and convert into similar scale. To avoid these
-      situations, Feature
-      Scalling is important. One of the method is Mean Normalization. Mean Normalization can be applied to all the input
-      features
-      except for X<sub>0</sub>. The formula is
+      
+If One feature is the scale 1-1000 and another 0-1 the counterplot will be oriented elliptically, 
+      which will be slower to converge. So it is better to normalize both inputs, outputs and convert
+      them into a similar scale. To avoid these situations, Feature Scaling is important. 
+      One of the methods is Mean Normalization. Mean Normalization can be applied to all the 
+      input features except for X<sub>0</sub>. The formula is
 
     <div class="container py-4" style="font-size: 1.5em;text-align: center;">
       <b style="font-size: 1.2em;text-align: center;">
@@ -376,7 +370,7 @@
       </b>
     </div>
     <p style="font-family:verdana;font-size: 1.5em;">
-      where &mu; is mean , s is standard deviation. The python implementation is
+      where &mu; is mean , s is the standard deviation The python implementation is
     </p>
     <hr>
     <h4><i>Python implementation</i> </h4>
